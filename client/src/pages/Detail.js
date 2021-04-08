@@ -3,7 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { useQuery } from '@apollo/react-hooks';
 
 import { QUERY_PRODUCTS } from "../utils/queries";
-import spinner from '../assets/spinner.gif'
+import spinner from '../assets/spinner.gif';
+import Cart from '../components/Cart';
 
 function Detail() {
   const { id } = useParams();
@@ -55,6 +56,7 @@ function Detail() {
       {
         loading ? <img src={spinner} alt="loading" /> : null
       }
+        <Cart />
     </>
   );
 };
